@@ -1,0 +1,17 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json#",
+  "alps": {
+    "descriptor": [
+      {
+        "id": "doCreateStateDiagram",
+        "type": "idempotent"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "semantic..json"
+    }
+  ]
+}
