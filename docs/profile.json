@@ -1,0 +1,80 @@
+{
+    "$schema": "https://alps-io.github.io/schemas/alps.json#",
+    "alps": {
+        "title": "MaAlps",
+        "link": [
+            {"rel": "about", "href": "https://bengo4com.esa.io/posts/23772"},
+            {"rel": "#repository", "href": "https://gitlab-docker.bengo4.com/asd/alps"}
+        ],
+        "descriptor": [
+            {"id": "id", "def": "https://schema.org/identifier"},
+            {"id": "ownerId", "title": "owner's id"},
+            {"id": "profileUrl", "title": "URL of profile"},
+            {"id": "asdUrl", "title": "URL of published asd"},
+            {"id": "title", "title": "Title of profile"},
+            {"id": "mediaType", "title": "Media type"},
+            {"id": "isPublic", "title": "Publication flag of profile"},
+            {"id": "profileFile", "title": "Profile raw data"},
+            {"id": "repository", "title": "Repository URL (custom relation)"},
+
+            {"id": "Index",
+                "descriptor": [
+                    {"href": "#PublicAlps"},
+                    {"href": "#AlpsItem"},
+                    {"href": "#goMyAlps"},
+                    {"href": "#goAlpsItem"},
+                    {"href": "#doCreateStateDiagram"}
+                ]
+            },
+            {"id": "PublicAlps",
+                "descriptor": [
+                    {"href": "#AlpsItem"}
+                ]
+            },
+            {"id": "MyAlps",
+                "descriptor": [
+                    {"href": "#AlpsItem"},
+                    {"href": "#goAlpsItem"},
+                    {"href": "#goIndex"},
+                    {"href": "#doCreate"},
+                    {"href": "#goAlpsItemEdit"}
+                ]
+            },
+            {"id": "AlpsItem",
+                "descriptor": [
+                    {"href": "#id"},
+                    {"href": "#ownerId"},
+                    {"href": "#title"},
+                    {"href": "#mediaType"},
+                    {"href": "#profileUrl"},
+                    {"href": "#asdUrl"},
+                    {"href": "#isPublic"},
+                    {"href": "#goMyAlps"},
+                    {"href": "#goIndex"}
+                ]
+            },
+            {"id": "StateDiagram"},
+            {"id": "AlpsItemEdit", "descriptor": [
+                {"href": "#AlpsItem"},
+                {"href": "#doEdit"}
+            ]},
+            {"id": "doCreateStateDiagram", "type": "idempotent", "rt": "#StateDiagram", "descriptor": [
+                {"href": "#profileFile"}
+            ]},
+            {"id": "goMyAlps", "type": "safe", "rt": "#MyAlps"},
+            {"id": "goIndex", "type": "safe", "rt": "#Index", "rel": "collection"},
+            {"id": "goAlpsItem", "type": "safe", "rt": "#AlpsItem", "rel": "item", "descriptor": [
+                {"href": "#id"}
+            ]},
+            {"id": "goAlpsItemEdit", "type": "safe", "rt": "#AlpsItemEdit", "rel": "edit-form", "descriptor": [
+                {"href": "#id"}
+            ]},
+            {"id": "doCreate", "type": "unsafe", "rt": "#AlpsItem", "descriptor": [
+                {"href": "#MyAlps"}
+            ]},
+            {"id": "doEdit", "type": "idempotent", "rt": "#MyAlps", "rel": "edit", "descriptor": [
+                {"href": "#MyAlps"}
+            ]}
+        ]
+    }
+}
