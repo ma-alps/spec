@@ -3,8 +3,8 @@
     "alps": {
         "title": "MaAlps",
         "link": [
-            {"rel": "about", "href": "https://bengo4com.esa.io/posts/23772"},
-            {"rel": "#repository", "href": "https://gitlab-docker.bengo4.com/asd/alps"}
+            {"rel": "about", "href": "https://github.com/ma-alps/profile"},
+            {"rel": "#repository", "href": "https://github.com/ma-alps/profile"}
         ],
         "descriptor": [
             {"id": "id", "def": "https://schema.org/identifier"},
