@@ -7,13 +7,15 @@ digraph application_state_diagram {
   ];
   node [shape = box, style = "bold,filled" fillcolor="lightgray"];
 
-    AlpsItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItem<br />(id)<br />(ownerId)<br />(title)<br />(mediaType)<br />(profileUrl)<br />(asdUrl)<br />(isPublic)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItem.html" target="_parent"]
+    AlpsItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItem<br />(id)<br />(isPublic)<br />(profileUrl)<br />(title)<br />(User)<br />(mediaType)<br />(asdUrl)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItem.html" target="_parent"]
     AlpsItemEdit [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItemEdit<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItemEdit.html" target="_parent"]
     Index [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>Index<br />(PublicAlps)<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.Index.html" target="_parent"]
     MyAlps [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>MyAlps<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.MyAlps.html" target="_parent"]
+    User [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>User<br />(id)<br /></td></tr></table>>,shape=box URL="docs/semantic.User.html" target="_parent"]
 
     AlpsItem -> Index [label = "goIndex, collection (safe)" URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
     AlpsItem -> MyAlps [label = "goMyAlps (safe)" URL="docs/safe.goMyAlps.html" target="_parent" fontsize=13];
+    AlpsItem -> User [label = "goUser (safe)" URL="docs/safe.goUser.html" target="_parent" fontsize=13];
     AlpsItemEdit -> MyAlps [label = "doEdit, edit (idempotent)" URL="docs/idempotent.doEdit.html" target="_parent" fontsize=13];
     Index -> AlpsItem [label = "goAlpsItem, item (safe)" URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
     Index -> MyAlps [label = "goMyAlps (safe)" URL="docs/safe.goMyAlps.html" target="_parent" fontsize=13];
@@ -21,6 +23,7 @@ digraph application_state_diagram {
     MyAlps -> AlpsItem [label=<<table  border="0"><tr><td align="left" href="docs/unsafe.doCreate.html">doCreate (unsafe)</td></tr><tr><td align="left" href="docs/safe.goAlpsItem.html">goAlpsItem (safe)</td></tr></table>> fontsize=13];
     MyAlps -> AlpsItemEdit [label = "goAlpsItemEdit, edit-form (safe)" URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
     MyAlps -> Index [label = "goIndex, collection (safe)" URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
+    User -> AlpsItem [label = "goAlpsItem, item (safe)" URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
 
     StateDiagram [URL="docs/semantic.StateDiagram.html" target="_parent"]
 
