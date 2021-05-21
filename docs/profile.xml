@@ -6,7 +6,6 @@
     <link href="https://github.com/ma-alps/profile" rel="about"/>
 
     <!-- ontology -->
-    <descriptor id="ownerId" title="owner's id"/>
     <descriptor id="id" href="https://schema.org/identifier"/>
     <descriptor id="repository" title="Repository URL (custom relation)"/>
     <descriptor id="mediaType" title="Media type"/>
@@ -38,7 +37,8 @@
         <descriptor href="#profileUrl"/>
         <descriptor href="#goIndex"/>
         <descriptor href="#title"/>
-        <descriptor href="#ownerId"/>
+        <descriptor href="#User"/>
+        <descriptor href="#goUser"/>
         <descriptor href="#goMyAlps"/>
         <descriptor href="#mediaType"/>
         <descriptor href="#asdUrl"/>
@@ -50,6 +50,10 @@
     <descriptor id="PublicAlps">
         <descriptor href="#AlpsItem"/>
     </descriptor>
+    <descriptor id="User" def="https://schema.org/Person" title="User">
+        <descriptor href="#id" />
+        <descriptor href="#goAlpsItem" />
+    </descriptor>
 
     <!-- choreography -->
     <descriptor id="goMyAlps" type="safe" rt="#MyAlps"/>
@@ -58,6 +62,9 @@
         <descriptor href="#id"/>
     </descriptor>
     <descriptor id="goAlpsItem" type="safe" rt="#AlpsItem">
+        <descriptor href="#id"/>
+    </descriptor>
+    <descriptor id="goUser" type="safe" rt="#User">
         <descriptor href="#id"/>
     </descriptor>
     <descriptor id="doEdit" type="idempotent" rt="#MyAlps">
