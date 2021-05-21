@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alps version="1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
+    <link href="https://github.com/ma-alps/profile" rel="#repository"/>
+    <link href="https://github.com/ma-alps/profile" rel="about"/>
+
+    <!-- ontology -->
+    <descriptor id="ownerId" title="owner's id"/>
+    <descriptor id="id" href="https://schema.org/identifier"/>
+    <descriptor id="repository" title="Repository URL (custom relation)"/>
+    <descriptor id="mediaType" title="Media type"/>
+    <descriptor id="isPublic" title="Publication flag of profile"/>
+    <descriptor id="profileUrl" title="URL of profile"/>
+    <descriptor id="asdUrl" title="URL of published asd"/>
+    <descriptor id="profileFile" title="Profile raw data"/>
+    <descriptor id="title" title="Title of profile"/>
+
+    <!-- taxonomy -->
+    <descriptor id="StateDiagram"/>
+    <descriptor id="MyAlps">
+        <descriptor href="#AlpsItem"/>
+        <descriptor href="#doCreate"/>
+        <descriptor href="#goAlpsItemEdit"/>
+        <descriptor href="#goAlpsItem"/>
+        <descriptor href="#goIndex"/>
+    </descriptor>
+    <descriptor id="Index">
+        <descriptor href="#PublicAlps"/>
+        <descriptor href="#AlpsItem"/>
+        <descriptor href="#goMyAlps"/>
+        <descriptor href="#doCreateStateDiagram"/>
+        <descriptor href="#goAlpsItem"/>
+    </descriptor>
+    <descriptor id="AlpsItem">
+        <descriptor href="#id"/>
+        <descriptor href="#isPublic"/>
+        <descriptor href="#profileUrl"/>
+        <descriptor href="#goIndex"/>
+        <descriptor href="#title"/>
+        <descriptor href="#ownerId"/>
+        <descriptor href="#goMyAlps"/>
+        <descriptor href="#mediaType"/>
+        <descriptor href="#asdUrl"/>
+    </descriptor>
+    <descriptor id="AlpsItemEdit">
+        <descriptor href="#AlpsItem"/>
+        <descriptor href="#doEdit"/>
+    </descriptor>
+    <descriptor id="PublicAlps">
+        <descriptor href="#AlpsItem"/>
+    </descriptor>
+
+    <!-- choreography -->
+    <descriptor id="goMyAlps" type="safe" rt="#MyAlps"/>
+    <descriptor id="goIndex" type="safe" rt="#Index"/>
+    <descriptor id="goAlpsItemEdit" type="safe" rt="#AlpsItemEdit">
+        <descriptor href="#id"/>
+    </descriptor>
+    <descriptor id="goAlpsItem" type="safe" rt="#AlpsItem">
+        <descriptor href="#id"/>
+    </descriptor>
+    <descriptor id="doEdit" type="idempotent" rt="#MyAlps">
+        <descriptor href="#MyAlps"/>
+    </descriptor>
+    <descriptor id="doCreateStateDiagram" type="idempotent" rt="#StateDiagram">
+        <descriptor href="#profileFile"/>
+    </descriptor>
+    <descriptor id="doCreate" type="unsafe" rt="#AlpsItem">
+        <descriptor href="#MyAlps"/>
+    </descriptor>
+</alps>
