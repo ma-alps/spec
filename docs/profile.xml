@@ -15,9 +15,9 @@
     <descriptor id="asdUrl" title="URL of published asd"/>
     <descriptor id="profileFile" title="Profile raw data"/>
     <descriptor id="title" title="Title of profile"/>
+    <descriptor id="StateDiagram"/>
 
     <!-- taxonomy -->
-    <descriptor id="StateDiagram"/>
     <descriptor id="MyAlps">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doCreate"/>
