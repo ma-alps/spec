@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AlpsItem.json",
+  "type": "object",
+  "examples": [
+    {
+      "$ref": "../example/AlpsItem.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "isPublic": {
+      "type": "boolean"
+    },
+    "profileUrl": {
+      "type": "string",
+      "format": "uri",
+      "examples": [
+        "https://ma-alps.github.io/spec/index.html"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "examples": [
+        "MaAlps"
+      ]
+    },
+    "user": {
+      "$ref": "./User.json"
+    },
+    "mediaType": {
+      "type": "string",
+      "enum": [
+        "application/alps+json",
+        "application/alps+xml"
+      ]
+    },
+    "asdUrl": {
+      "type": "string",
+      "format": "uri",
+      "examples": [
+        "https://ma-alps.github.io/spec/index.html"
+      ]
+    }
+  }
+}
