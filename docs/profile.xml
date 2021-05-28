@@ -3,8 +3,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
     <title>MaAlps</title>
-    <link href="https://github.com/ma-alps/profile" rel="#repository"/>
-    <link href="https://github.com/ma-alps/profile" rel="about"/>
+    <link href="https://github.com/ma-alps/spec" rel="#repository"/>
+    <link href="https://github.com/ma-alps/spec" rel="about"/>
 
     <!-- ontology -->
     <descriptor id="id" def="https://schema.org/identifier"/>
