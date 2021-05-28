@@ -1,3 +1,3 @@
 # MaAlps profile
 
-https://ma-alps.github.io/profile/
+https://ma-alps.github.io/spec/
