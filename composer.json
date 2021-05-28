@@ -5,6 +5,6 @@
         "koriym/app-state-diagram": "^0.3.6"
     },
     "scripts": {
-        "doc": "./vendor/koriym/app-state-diagram/bin/asd docs/profile.json"
+        "doc": "./vendor/koriym/app-state-diagram/bin/asd docs/profile.xml"
     }
 }
