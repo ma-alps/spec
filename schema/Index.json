@@ -14,5 +14,8 @@
         "$ref": "./AlpsItem.json"
       }
     }
-  }
+  },
+  "required": [
+    "alpsList"
+  ]
 }
