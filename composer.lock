@@ -4,25 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01ba904f65338894b2465f5baf695a96",
+    "content-hash": "545de27a47b2c65a2f739d6296911ce7",
     "packages": [
         {
             "name": "koriym/app-state-diagram",
-            "version": "0.5.1",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koriym/app-state-diagram.git",
-                "reference": "1ddc0c126906da10b6531aa0c025ad7ccfd2931f"
+                "reference": "94ce481c0cd224767fef4c63efb29b726303c516"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/1ddc0c126906da10b6531aa0c025ad7ccfd2931f",
-                "reference": "1ddc0c126906da10b6531aa0c025ad7ccfd2931f",
+                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/94ce481c0cd224767fef4c63efb29b726303c516",
+                "reference": "94ce481c0cd224767fef4c63efb29b726303c516",
                 "shasum": ""
             },
             "require": {
+                "ext-dom": "*",
                 "ext-filter": "*",
                 "ext-json": "*",
+                "ext-libxml": "*",
                 "ext-simplexml": "*",
                 "michelf/php-markdown": "^1.9",
                 "php": "^7.3 || ^8.0",
@@ -39,7 +41,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Koriym\\AppStateDiagram\\": "src/"
+                    "Koriym\\AppStateDiagram\\": "src/",
+                    "Koriym\\XmlLoader\\": "src-xml"
                 },
                 "files": [
                     "vendor-xml2json/xml2json.php"
@@ -58,9 +61,9 @@
             "description": "An Application Diagram Generator",
             "support": {
                 "issues": "https://github.com/koriym/app-state-diagram/issues",
-                "source": "https://github.com/koriym/app-state-diagram/tree/0.5.1"
+                "source": "https://github.com/koriym/app-state-diagram/tree/0.6.0"
             },
-            "time": "2021-05-21T10:36:51+00:00"
+            "time": "2021-05-30T16:25:47+00:00"
         },
         {
             "name": "michelf/php-markdown",
