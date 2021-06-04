@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/Index.json",
+  "$id": "Index.json",
+  "alpsList": [
+    {
+      "alpsItem": {
+        "$ref": "../example/AlpsItem.json"
+      }
+    }
+  ]
+}
