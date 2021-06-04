@@ -2,6 +2,14 @@
   "$schema": "../schema/doCreate.json",
   "$id": "doCreate.json",
   "alpsItem": {
-    "$ref": "./AlpsItem.json"
+    "id": "1",
+    "title": "The Example profile",
+    "profileUrl": "https://ma-alps.github.io/spec/profile.xml",
+    "mediaType": "application/alps+xml",
+    "asdUrl": "https://ma-alps.github.io/spec/index.html",
+    "isPublic": false,
+    "user": {
+      "id": "NaokiTsuchiya"
+    }
   }
 }
