@@ -10,7 +10,7 @@ digraph application_state_diagram {
     AlpsItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItem<br />(id)<br />(isPublic)<br />(profileUrl)<br />(title)<br />(User)<br />(mediaType)<br />(asdUrl)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItem.html" target="_parent"]
     AlpsItemEdit [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItemEdit<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItemEdit.html" target="_parent"]
     Index [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>Index<br />(PublicAlps)<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.Index.html" target="_parent"]
-    MyAlps [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>MyAlps<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.MyAlps.html" target="_parent"]
+    MyAlps [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>MyAlps<br />(AlpsItem)<br />(User)<br /></td></tr></table>>,shape=box URL="docs/semantic.MyAlps.html" target="_parent"]
     User [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>User<br />(id)<br /></td></tr></table>>,shape=box URL="docs/semantic.User.html" target="_parent"]
 
     AlpsItem -> Index [label = "goIndex, collection (safe)" URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
