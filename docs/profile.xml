@@ -20,7 +20,7 @@
 
     <!-- taxonomy -->
     <descriptor id="MyAlps">
-        <descriptor href="#AlpsItem"/>
+        <descriptor href="#AlpsList"/>
         <descriptor href="#doCreate"/>
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#goAlpsItem"/>
@@ -28,8 +28,7 @@
         <descriptor href="#User"/>
     </descriptor>
     <descriptor id="Index">
-        <descriptor href="#PublicAlps"/>
-        <descriptor href="#AlpsItem"/>
+        <descriptor href="#AlpsList"/>
         <descriptor href="#goMyAlps"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
@@ -54,9 +53,6 @@
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
-    </descriptor>
-    <descriptor id="PublicAlps">
-        <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="User" def="https://schema.org/Person" title="User">
         <descriptor href="#id" />
