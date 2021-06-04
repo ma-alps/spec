@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "doCreateStateDiagram.json",
+  "type": "object",
+  "examples": [
+    {
+      "$ref": "../example/doCreateStateDiagram.json"
+    }
+  ],
+  "properties": {
+    "profileFile": {
+      "type": "string"
+    }
+  }
+}
