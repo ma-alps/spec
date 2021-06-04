@@ -7,6 +7,9 @@
       "$ref": "../example/doCreateStateDiagram.json"
     }
   ],
+  "required": [
+    "profileFile"
+  ],
   "properties": {
     "profileFile": {
       "type": "string"
