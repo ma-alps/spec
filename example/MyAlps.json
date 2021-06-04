@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/MyAlps.json",
+  "$id": "MyAlps.json",
+  "alpsItem": {
+    "$ref": "./AlpsItem.json"
+  },
+  "user": {
+    "$ref": "./User.json"
+  }
+}
