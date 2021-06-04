@@ -1,0 +1,7 @@
+{
+  "$schema": "../schema/doCreate.json",
+  "$id": "doCreate.json",
+  "myAlps": {
+    "$ref": "./AlpsItem.json"
+  }
+}
