@@ -48,6 +48,9 @@
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#doDelete"/>
     </descriptor>
+    <descriptor id="AlpsList">
+        <descriptor href="#AlpsItem"/>
+    </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
