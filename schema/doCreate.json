@@ -3,7 +3,7 @@
   "$id": "doCreate.json",
   "type": "object",
   "properties": {
-    "myAlps": {
+    "alpsItem": {
       "$ref": "./AlpsItem.json"
     }
   }
