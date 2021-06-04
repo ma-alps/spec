@@ -45,6 +45,7 @@
         <descriptor href="#goMyAlps"/>
         <descriptor href="#mediaType"/>
         <descriptor href="#asdUrl"/>
+        <descriptor href="#goAlpsItemEdit"/>
     </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
