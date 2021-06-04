@@ -74,8 +74,8 @@
     <descriptor id="goUser" type="safe" rt="#User">
         <descriptor href="#id"/>
     </descriptor>
-    <descriptor id="doEdit" type="idempotent" rt="#MyAlps" rel="edit">
-        <descriptor href="#MyAlps"/>
+    <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit">
+        <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="doCreateStateDiagram" type="idempotent" rt="#StateDiagram">
         <descriptor href="#profileFile"/>
