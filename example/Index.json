@@ -3,9 +3,7 @@
   "$id": "Index.json",
   "alpsList": [
     {
-      "alpsItem": {
-        "$ref": "../example/AlpsItem.json"
-      }
+      "$ref": "../example/AlpsItem.json"
     }
   ]
 }
