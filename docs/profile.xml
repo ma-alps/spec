@@ -80,7 +80,7 @@
         <descriptor href="#profileFile"/>
     </descriptor>
     <descriptor id="doCreate" type="unsafe" rt="#AlpsItem">
-        <descriptor href="#MyAlps"/>
+        <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="doDelete" type="idempotent" rt="#MyAlps">
         <descriptor href="#id" />
