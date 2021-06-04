@@ -46,6 +46,7 @@
         <descriptor href="#mediaType"/>
         <descriptor href="#asdUrl"/>
         <descriptor href="#goAlpsItemEdit"/>
+        <descriptor href="#doDelete"/>
     </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
@@ -81,5 +82,8 @@
     </descriptor>
     <descriptor id="doCreate" type="unsafe" rt="#AlpsItem">
         <descriptor href="#MyAlps"/>
+    </descriptor>
+    <descriptor id="doDelete" type="idempotent" rt="#MyAlps">
+        <descriptor href="#id" />
     </descriptor>
 </alps>
