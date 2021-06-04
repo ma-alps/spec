@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alps version="1.0"
+<alps
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
     <title>MaAlps</title>
+    <version>1.0</version>
     <link href="https://github.com/ma-alps/spec" rel="#repository"/>
     <link href="https://github.com/ma-alps/spec" rel="about"/>
 
@@ -24,6 +25,7 @@
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#goAlpsItem"/>
         <descriptor href="#goIndex"/>
+        <descriptor href="#User"/>
     </descriptor>
     <descriptor id="Index">
         <descriptor href="#PublicAlps"/>
@@ -57,7 +59,9 @@
     </descriptor>
 
     <!-- choreography -->
-    <descriptor id="goMyAlps" type="safe" rt="#MyAlps"/>
+    <descriptor id="goMyAlps" type="safe" rt="#MyAlps">
+        <descriptor href="#id" title="userId" />
+    </descriptor>
     <descriptor id="goIndex" type="safe" rt="#Index" rel="collection"/>
     <descriptor id="goAlpsItemEdit" type="safe" rt="#AlpsItemEdit" rel="edit-form">
         <descriptor href="#id"/>
