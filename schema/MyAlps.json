@@ -14,5 +14,9 @@
     "user": {
       "$ref": "./User.json"
     }
-  }
+  },
+  "required": [
+    "alpsItem",
+    "user"
+  ]
 }
