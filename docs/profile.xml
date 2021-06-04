@@ -20,7 +20,7 @@
 
     <!-- taxonomy -->
     <descriptor id="MyAlps">
-        <descriptor href="#AlpsItem"/>
+        <descriptor href="#AlpsList"/>
         <descriptor href="#doCreate"/>
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#goAlpsItem"/>
@@ -28,8 +28,7 @@
         <descriptor href="#User"/>
     </descriptor>
     <descriptor id="Index">
-        <descriptor href="#PublicAlps"/>
-        <descriptor href="#AlpsItem"/>
+        <descriptor href="#AlpsList"/>
         <descriptor href="#goMyAlps"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
@@ -48,12 +47,12 @@
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#doDelete"/>
     </descriptor>
+    <descriptor id="AlpsList" rel="collection">
+        <descriptor href="#AlpsItem"/>
+    </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
-    </descriptor>
-    <descriptor id="PublicAlps">
-        <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="User" def="https://schema.org/Person" title="User">
         <descriptor href="#id" />
@@ -81,7 +80,7 @@
         <descriptor href="#profileFile"/>
     </descriptor>
     <descriptor id="doCreate" type="unsafe" rt="#AlpsItem">
-        <descriptor href="#MyAlps"/>
+        <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="doDelete" type="idempotent" rt="#MyAlps">
         <descriptor href="#id" />
