@@ -2,9 +2,17 @@
   "$schema": "../schema/MyAlps.json",
   "$id": "MyAlps.json",
   "alpsItem": {
-    "$ref": "./AlpsItem.json"
+    "id": "1",
+    "isPublic": true,
+    "mediaType": "application/alps+xml",
+    "profileUrl": "https://ma-alps.github.io/spec/profile.xml",
+    "title": "The Example profile",
+    "user": {
+      "id": "NaokiTsuchiya"
+    },
+    "asdUrl": "https://ma-alps.github.io/spec/index.html"
   },
   "user": {
-    "$ref": "./User.json"
+    "id": "NaokiTsuchiya"
   }
 }

@@ -6,5 +6,8 @@
     "alpsItem": {
       "$ref": "./AlpsItem.json"
     }
-  }
+  },
+  "required": [
+    "alpsItem"
+  ]
 }
