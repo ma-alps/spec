@@ -7,13 +7,13 @@
     <link href="https://github.com/ma-alps/spec" rel="about"/>
 
     <!-- ontology -->
-    <descriptor id="id" def="https://schema.org/identifier"/>
+    <descriptor id="id" def="https://schema.org/identifier" title="identifier"/>
     <descriptor id="repository" title="Repository URL (custom relation)"/>
     <descriptor id="mediaType" title="Media type"/>
     <descriptor id="isPublic" title="Publication flag of profile"/>
     <descriptor id="profileFile" title="Profile raw data"/>
     <descriptor id="title" title="Title of profile"/>
-    <descriptor id="StateDiagram"/>
+    <descriptor id="StateDiagram" title="A State diagram resource"/>
     <descriptor id="Asd" title="Application State Diagram"/>
     <descriptor id="AlpsProfile" title="ALPS profile"/>
     <descriptor id="profileUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD profile"/>
