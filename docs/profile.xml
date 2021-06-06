@@ -12,8 +12,6 @@
     <descriptor id="repository" title="Repository URL (custom relation)"/>
     <descriptor id="mediaType" title="Media type"/>
     <descriptor id="isPublic" title="Publication flag of profile"/>
-    <descriptor id="profileUrl" title="URL of profile"/>
-    <descriptor id="asdUrl" title="URL of published asd"/>
     <descriptor id="profileFile" title="Profile raw data"/>
     <descriptor id="title" title="Title of profile"/>
     <descriptor id="StateDiagram"/>
@@ -36,14 +34,12 @@
     <descriptor id="AlpsItem">
         <descriptor href="#id"/>
         <descriptor href="#isPublic"/>
-        <descriptor href="#profileUrl"/>
         <descriptor href="#goIndex"/>
         <descriptor href="#title"/>
         <descriptor href="#User"/>
         <descriptor href="#goUser"/>
         <descriptor href="#goMyAlps"/>
         <descriptor href="#mediaType"/>
-        <descriptor href="#asdUrl"/>
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#doDelete"/>
     </descriptor>
