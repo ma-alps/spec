@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alps
+<alps version="1.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
     <title>MaAlps</title>
-    <version>1.0</version>
     <link href="https://github.com/ma-alps/spec" rel="#repository"/>
     <link href="https://github.com/ma-alps/spec" rel="about"/>
 
