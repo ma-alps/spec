@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "545de27a47b2c65a2f739d6296911ce7",
+    "content-hash": "bbf16f1675b3d214836940b871370149",
     "packages": [
         {
             "name": "koriym/app-state-diagram",
-            "version": "0.6.0",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koriym/app-state-diagram.git",
-                "reference": "94ce481c0cd224767fef4c63efb29b726303c516"
+                "reference": "9990e77735d15d8902dae68fe2f7ef0053989d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/94ce481c0cd224767fef4c63efb29b726303c516",
-                "reference": "94ce481c0cd224767fef4c63efb29b726303c516",
+                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/9990e77735d15d8902dae68fe2f7ef0053989d67",
+                "reference": "9990e77735d15d8902dae68fe2f7ef0053989d67",
                 "shasum": ""
             },
             "require": {
@@ -61,9 +61,9 @@
             "description": "An Application Diagram Generator",
             "support": {
                 "issues": "https://github.com/koriym/app-state-diagram/issues",
-                "source": "https://github.com/koriym/app-state-diagram/tree/0.6.0"
+                "source": "https://github.com/koriym/app-state-diagram/tree/0.7.0"
             },
-            "time": "2021-05-30T16:25:47+00:00"
+            "time": "2021-06-06T17:25:53+00:00"
         },
         {
             "name": "michelf/php-markdown",
