@@ -19,6 +19,7 @@
 
     <!-- taxonomy -->
     <descriptor id="Profile">
+        <doc>ユーザーのプロフィール。AlpsList は、所有者が訪れた際には非公開のALPS profile も含まれる。</doc>
         <descriptor href="#alpsList"/>
         <descriptor href="#user"/>
         <descriptor href="#doCreate"/>
