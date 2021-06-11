@@ -2,11 +2,9 @@
   "$schema": "../schema/AlpsItem.json",
   "id": "81c08016-d2e2-4e93-8982-39e4c905bb18",
   "isPublic": true,
-  "profileUrl": "https://ma-alps.github.io/spec/index.html",
   "title": "MaAlps",
   "user": {
     "id": "acio-o9"
   },
-  "mediaType": "application/alps+json",
-  "asdUrl": "https://ma-alps.github.io/spec/index.html"
+  "mediaType": "application/alps+json"
 }

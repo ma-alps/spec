@@ -14,13 +14,6 @@
     "isPublic": {
       "type": "boolean"
     },
-    "profileUrl": {
-      "type": "string",
-      "format": "uri",
-      "examples": [
-        "https://ma-alps.github.io/spec/index.html"
-      ]
-    },
     "title": {
       "type": "string",
       "examples": [
@@ -35,13 +28,6 @@
       "enum": [
         "application/alps+json",
         "application/alps+xml"
-      ]
-    },
-    "asdUrl": {
-      "type": "string",
-      "format": "uri",
-      "examples": [
-        "https://ma-alps.github.io/spec/index.html"
       ]
     }
   }

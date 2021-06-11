@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alps
+<alps version="1.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
     <title>MaAlps</title>
-    <version>1.0</version>
     <link href="https://github.com/ma-alps/spec" rel="#repository"/>
     <link href="https://github.com/ma-alps/spec" rel="about"/>
 
@@ -12,11 +11,11 @@
     <descriptor id="repository" title="Repository URL (custom relation)"/>
     <descriptor id="mediaType" title="Media type"/>
     <descriptor id="isPublic" title="Publication flag of profile"/>
-    <descriptor id="profileUrl" title="URL of profile"/>
-    <descriptor id="asdUrl" title="URL of published asd"/>
     <descriptor id="profileFile" title="Profile raw data"/>
     <descriptor id="title" title="Title of profile"/>
     <descriptor id="StateDiagram"/>
+    <descriptor id="Asd" title="Application State Diagram"/>
+    <descriptor id="Profile" title="ALPS profile"/>
 
     <!-- taxonomy -->
     <descriptor id="MyAlps">
@@ -36,15 +35,15 @@
     <descriptor id="AlpsItem">
         <descriptor href="#id"/>
         <descriptor href="#isPublic"/>
-        <descriptor href="#profileUrl"/>
         <descriptor href="#goIndex"/>
         <descriptor href="#title"/>
         <descriptor href="#User"/>
         <descriptor href="#goUser"/>
         <descriptor href="#goMyAlps"/>
         <descriptor href="#mediaType"/>
-        <descriptor href="#asdUrl"/>
         <descriptor href="#goAlpsItemEdit"/>
+        <descriptor href="#goProfile"/>
+        <descriptor href="#goAsd" />
         <descriptor href="#doDelete"/>
     </descriptor>
     <descriptor id="AlpsList" rel="collection">
@@ -78,6 +77,12 @@
     <descriptor id="goUser" type="safe" rt="#User" title="Go to the user">
         <doc format="markdown">A safe idempotent action to view the user.</doc>
         <descriptor href="#id" title="userId"/>
+    </descriptor>
+    <descriptor id="goAsd" type="safe" rt="#Asd" title="Go to the ASD">
+        <doc format="markdown">A safe idempotent action to view the state diagram.</doc>
+    </descriptor>
+    <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the ALPS profile">
+        <doc format="markdown">A safe idempotent action to view the ALPS profile.</doc>
     </descriptor>
     <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit" title="Edit an existing ALPS profile item">
         <doc format="markdown">An unsafe idempotent action to edit an existing ALPS profile item.</doc>
