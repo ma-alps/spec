@@ -1,0 +1,12 @@
+{
+  "$schema": "../AlpsItemEdit.json",
+  "alpsItem": {
+    "id": "1",
+    "isPublic": true,
+    "title": "MaAlps",
+    "user": {
+      "id": "poemn"
+    },
+    "mediaType": "application/alps+json"
+  }
+}
