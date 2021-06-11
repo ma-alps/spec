@@ -1,5 +1,5 @@
 {
-  "$schema": "../schema/MyAlps.json",
+  "$schema": "./MyAlps.json",
   "$id": "MyAlps.json",
   "alpsItem": {
     "id": "1",

@@ -4,7 +4,7 @@
   "type": "object",
   "examples": [
     {
-      "$ref": "../example/Index.json"
+      "$ref": "./example/Index.json"
     }
   ],
   "properties": {

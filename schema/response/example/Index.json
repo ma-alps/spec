@@ -1,5 +1,5 @@
 {
-  "$schema": "../schema/Index.json",
+  "$schema": "../Index.json",
   "$id": "Index.json",
   "alpsList": [
     {
