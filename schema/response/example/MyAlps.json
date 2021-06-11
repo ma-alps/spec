@@ -1,5 +1,5 @@
 {
-  "$schema": "./MyAlps.json",
+  "$schema": "../MyAlps.json",
   "alpsItem": {
     "id": "1",
     "isPublic": true,

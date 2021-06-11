@@ -3,16 +3,14 @@
   "$id": "MyAlps.json",
   "type": "object",
   "examples": [
-    {
-      "$ref": "./example/MyAlps.json"
-    }
+    {"$ref": "./example/MyAlps.json"}
   ],
   "properties": {
     "alpsItem": {
       "$ref": "./AlpsItem.json"
     },
     "user": {
-      "$ref": "./User.json"
+      "$ref": "./def/user.json"
     }
   },
   "required": [

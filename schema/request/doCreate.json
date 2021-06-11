@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "alpsItem": {
-      "$ref": "../response/example/AlpsItem.json"
+      "$ref": "../response/AlpsItem.json"
     }
   },
   "required": [
