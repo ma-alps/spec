@@ -1,10 +1,10 @@
 {
   "$schema": "../AlpsItem.json",
-  "id": "81c08016-d2e2-4e93-8982-39e4c905bb18",
+  "id": "1",
   "isPublic": true,
   "title": "MaAlps",
   "user": {
-    "id": "acio-o9"
+    "id": "1"
   },
   "mediaType": "application/alps+json"
 }
