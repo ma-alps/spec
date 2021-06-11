@@ -3,16 +3,14 @@
   "$id": "doCreateStateDiagram.json",
   "type": "object",
   "examples": [
-    {
-      "$ref": "../example/doCreateStateDiagram.json"
-    }
-  ],
-  "required": [
-    "profileFile"
+    {"$ref": "./example/doCreateStateDiagram.json"}
   ],
   "properties": {
     "profileFile": {
       "type": "string"
     }
-  }
+  },
+  "required": [
+    "profileFile"
+  ]
 }

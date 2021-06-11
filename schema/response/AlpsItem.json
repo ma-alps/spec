@@ -3,9 +3,7 @@
   "$id": "AlpsItem.json",
   "type": "object",
   "examples": [
-    {
-      "$ref": "../example/AlpsItem.json"
-    }
+    {"$ref": "./example/AlpsItem.json"}
   ],
   "properties": {
     "id": {
@@ -21,7 +19,7 @@
       ]
     },
     "user": {
-      "$ref": "./User.json"
+      "$ref": "./def/user.json"
     },
     "mediaType": {
       "type": "string",
@@ -30,5 +28,12 @@
         "application/alps+xml"
       ]
     }
-  }
+  },
+  "required": [
+    "id",
+    "isPublic",
+    "title",
+    "user",
+    "mediaType"
+  ]
 }

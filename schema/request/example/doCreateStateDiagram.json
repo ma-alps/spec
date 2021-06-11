@@ -1,5 +1,4 @@
 {
-  "$schema": "../schema/doCreateStateDiagram.json",
-  "$id": "doCreateStateDiagram.json",
+  "$schema": "../doCreateStateDiagram.json",
   "profileFile": "{\"$schema\": \"https://alps-io.github.io/schemas/alps.json\", \"alps\" : {\"descriptor\": []}}"
 }

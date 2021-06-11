@@ -1,9 +1,8 @@
 {
-  "$schema": "../schema/Index.json",
-  "$id": "Index.json",
+  "$schema": "../Index.json",
   "alpsList": [
     {
-      "id": "81c08016-d2e2-4e93-8982-39e4c905bb18",
+      "id": "1",
       "isPublic": true,
       "profileUrl": "https://ma-alps.github.io/spec/index.html",
       "title": "MaAlps",

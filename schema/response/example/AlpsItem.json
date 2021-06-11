@@ -1,0 +1,10 @@
+{
+  "$schema": "../AlpsItem.json",
+  "id": "1",
+  "isPublic": true,
+  "title": "MaAlps",
+  "user": {
+    "id": "1"
+  },
+  "mediaType": "application/alps+json"
+}
