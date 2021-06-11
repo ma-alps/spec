@@ -15,20 +15,21 @@
     <descriptor id="title" title="Title of profile"/>
     <descriptor id="StateDiagram"/>
     <descriptor id="Asd" title="Application State Diagram"/>
-    <descriptor id="Profile" title="ALPS profile"/>
+    <descriptor id="AlpsProfile" title="ALPS profile"/>
 
     <!-- taxonomy -->
-    <descriptor id="MyAlps">
-        <descriptor href="#AlpsList"/>
+    <descriptor id="Profile">
+        <doc>ユーザーのプロフィール。AlpsList は、所有者が訪れた際には非公開のALPS profile も含まれる。</doc>
+        <descriptor href="#alpsList"/>
+        <descriptor href="#user"/>
         <descriptor href="#doCreate"/>
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#goAlpsItem"/>
         <descriptor href="#goIndex"/>
-        <descriptor href="#User"/>
     </descriptor>
     <descriptor id="Index">
-        <descriptor href="#AlpsList"/>
-        <descriptor href="#goMyAlps"/>
+        <descriptor href="#alpsList"/>
+        <descriptor href="#goProfile"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
     </descriptor>
@@ -37,29 +38,27 @@
         <descriptor href="#isPublic"/>
         <descriptor href="#goIndex"/>
         <descriptor href="#title"/>
-        <descriptor href="#User"/>
-        <descriptor href="#goUser"/>
-        <descriptor href="#goMyAlps"/>
+        <descriptor href="#user"/>
+        <descriptor href="#goProfile"/>
         <descriptor href="#mediaType"/>
         <descriptor href="#goAlpsItemEdit"/>
-        <descriptor href="#goProfile"/>
+        <descriptor href="#goAlpsProfile"/>
         <descriptor href="#goAsd" />
         <descriptor href="#doDelete"/>
     </descriptor>
-    <descriptor id="AlpsList" rel="collection">
+    <descriptor id="alpsList" rel="collection">
         <descriptor href="#AlpsItem"/>
     </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
     </descriptor>
-    <descriptor id="User" def="https://schema.org/Person" title="User">
+    <descriptor id="user" def="https://schema.org/Person" title="User">
         <descriptor href="#id" />
-        <descriptor href="#goAlpsItem" />
     </descriptor>
 
     <!-- choreography -->
-    <descriptor id="goMyAlps" type="safe" rt="#MyAlps" title="Go to the user's profile">
+    <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the user's profile">
         <doc format="markdown">An optional safe idempotent action to view the user's profile resource.</doc>
         <descriptor href="#id" title="userId" />
     </descriptor>
@@ -68,20 +67,17 @@
     </descriptor>
     <descriptor id="goAlpsItemEdit" type="safe" rt="#AlpsItemEdit" rel="edit-form" title="Go to the ALPS profile item edit form">
         <doc format="markdown">A safe idempotent action to view the ALPS profile item edit form.</doc>
-        <descriptor href="#id" title="alpsItemId"/>
+        <descriptor id="alpsItemId" href="#id" title="alpsItemId"/>
+        <descriptor id="userId" href="#id" title="userId"/>
     </descriptor>
     <descriptor id="goAlpsItem" type="safe" rt="#AlpsItem" rel="item" title="Go to the ALPS profile">
         <doc format="markdown">A safe idempotent action to view the ALPS profile item.</doc>
         <descriptor href="#id" title="alpsItemId"/>
     </descriptor>
-    <descriptor id="goUser" type="safe" rt="#User" title="Go to the user">
-        <doc format="markdown">A safe idempotent action to view the user.</doc>
-        <descriptor href="#id" title="userId"/>
-    </descriptor>
     <descriptor id="goAsd" type="safe" rt="#Asd" title="Go to the ASD">
         <doc format="markdown">A safe idempotent action to view the state diagram.</doc>
     </descriptor>
-    <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the ALPS profile">
+    <descriptor id="goAlpsProfile" type="safe" rt="#AlpsProfile" title="Go to the ALPS profile">
         <doc format="markdown">A safe idempotent action to view the ALPS profile.</doc>
     </descriptor>
     <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit" title="Edit an existing ALPS profile item">
@@ -96,7 +92,7 @@
         <doc format="markdown">An unsafe action to create a new ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
     </descriptor>
-    <descriptor id="doDelete" type="idempotent" rt="#MyAlps" title="Delete an existing ALPS profile item">
+    <descriptor id="doDelete" type="idempotent" rt="#Profile" title="Delete an existing ALPS profile item">
         <doc format="markdown">An unsafe idempotent action to delete a existing ALPS profile item.</doc>
         <descriptor href="#id" title="alpsItemId" />
     </descriptor>

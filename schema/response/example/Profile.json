@@ -1,0 +1,17 @@
+{
+  "$schema": "../Profile.json",
+  "alpsList": [
+    {
+      "id": "1",
+      "isPublic": true,
+      "mediaType": "application/alps+xml",
+      "title": "The Example profile",
+      "user": {
+        "id": "NaokiTsuchiya"
+      }
+    }
+  ],
+  "user": {
+    "id": "NaokiTsuchiya"
+  }
+}

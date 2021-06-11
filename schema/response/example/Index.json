@@ -4,13 +4,11 @@
     {
       "id": "1",
       "isPublic": true,
-      "profileUrl": "https://ma-alps.github.io/spec/index.html",
       "title": "MaAlps",
       "user": {
         "id": "acio-o9"
       },
-      "mediaType": "application/alps+json",
-      "asdUrl": "https://ma-alps.github.io/spec/index.html"
+      "mediaType": "application/alps+json"
     }
   ]
 }
