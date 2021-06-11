@@ -15,7 +15,7 @@
     <descriptor id="title" title="Title of profile"/>
     <descriptor id="StateDiagram"/>
     <descriptor id="Asd" title="Application State Diagram"/>
-    <descriptor id="Profile" title="ALPS profile"/>
+    <descriptor id="AlpsProfile" title="ALPS profile"/>
 
     <!-- taxonomy -->
     <descriptor id="MyAlps">
@@ -42,7 +42,7 @@
         <descriptor href="#goMyAlps"/>
         <descriptor href="#mediaType"/>
         <descriptor href="#goAlpsItemEdit"/>
-        <descriptor href="#goProfile"/>
+        <descriptor href="#goAlpsProfile"/>
         <descriptor href="#goAsd" />
         <descriptor href="#doDelete"/>
     </descriptor>
@@ -81,7 +81,7 @@
     <descriptor id="goAsd" type="safe" rt="#Asd" title="Go to the ASD">
         <doc format="markdown">A safe idempotent action to view the state diagram.</doc>
     </descriptor>
-    <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the ALPS profile">
+    <descriptor id="goAlpsProfile" type="safe" rt="#AlpsProfile" title="Go to the ALPS profile">
         <doc format="markdown">A safe idempotent action to view the ALPS profile.</doc>
     </descriptor>
     <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit" title="Edit an existing ALPS profile item">
