@@ -7,10 +7,7 @@
   ],
   "properties": {
     "alpsList": {
-      "type": "array",
-      "items": {
-        "$ref": "./AlpsItem.json"
-      }
+      "$ref": "../def/alpsList.json"
     }
   },
   "required": [

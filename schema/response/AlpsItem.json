@@ -19,7 +19,7 @@
       ]
     },
     "user": {
-      "$ref": "./def/user.json"
+      "$ref": "../def/user.json"
     },
     "mediaType": {
       "type": "string",
