@@ -6,5 +6,7 @@
   "user": {
     "id": "1"
   },
-  "mediaType": "application/alps+json"
+  "mediaType": "application/alps+json",
+  "asdUrl": "https://ma-alps.github.io/spec/index.html",
+  "profileUrl": "https://ma-alps.github.io/spec/profile.xml"
 }

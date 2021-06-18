@@ -1,0 +1,14 @@
+{
+  "$schema": "../AlpsItemEdit.json",
+  "alpsItem": {
+    "id": "1",
+    "isPublic": true,
+    "title": "MaAlps",
+    "user": {
+      "id": "poemn"
+    },
+    "mediaType": "application/alps+json",
+    "asdUrl": "https://ma-alps.github.io/spec/index.html",
+    "profileUrl": "https://ma-alps.github.io/spec/profile.xml"
+  }
+}

@@ -16,6 +16,8 @@
     <descriptor id="StateDiagram"/>
     <descriptor id="Asd" title="Application State Diagram"/>
     <descriptor id="AlpsProfile" title="ALPS profile"/>
+    <descriptor id="profileUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD profile"/>
+    <descriptor id="asdUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD"/>
 
     <!-- taxonomy -->
     <descriptor id="Profile">
