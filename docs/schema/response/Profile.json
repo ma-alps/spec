@@ -3,7 +3,7 @@
   "$id": "Profile.json",
   "type": "object",
   "examples": [
-    {"$ref": "./example/Profile.json"}
+    {"$ref": "example/Profile.json"}
   ],
   "properties": {
     "alpsList": {
