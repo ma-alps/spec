@@ -51,14 +51,14 @@
         <descriptor href="#doDelete"/>
         <link href="../schema/response/AlpsItem.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="alpsList" rel="collection">
-        <descriptor href="#AlpsItem"/>
-        <link href="../schema/def/alpsList.json" rel="schema" title="JsonSchema file"/>
-    </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
         <link href="../schema/response/AlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="alpsList" rel="collection">
+        <descriptor href="#AlpsItem"/>
+        <link href="../schema/def/alpsList.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="user" def="https://schema.org/Person" title="User">
         <descriptor href="#id" />
