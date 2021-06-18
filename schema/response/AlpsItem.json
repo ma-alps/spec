@@ -27,6 +27,12 @@
         "application/alps+json",
         "application/alps+xml"
       ]
+    },
+    "asdUrl": {
+      "type": "string"
+    },
+    "profileUrl": {
+      "type": "string"
     }
   },
   "required": [
@@ -34,6 +40,8 @@
     "isPublic",
     "title",
     "user",
-    "mediaType"
+    "mediaType",
+    "asdUrl",
+    "profileUrl"
   ]
 }

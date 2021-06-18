@@ -8,7 +8,9 @@
       "title": "The Example profile",
       "user": {
         "id": "NaokiTsuchiya"
-      }
+      },
+      "asdUrl": "https://ma-alps.github.io/spec/index.html",
+      "profileUrl": "https://ma-alps.github.io/spec/profile.xml"
     }
   ],
   "user": {
