@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "goAlpsItem.json",
+  "type": "object",
+  "examples": [
+    {"$ref": "./example/goAlpsItem.json"}
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}
