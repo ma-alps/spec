@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "doEdit.json",
+  "examples": [
+    {"$ref": "example/doEdit.json"}
+  ],
+  "type": "object",
+  "properties": {
+    "alpsItem": {
+      "$ref": "../response/AlpsItem.json"
+    }
+  },
+  "required": [
+    "alpsItem"
+  ]
+}
