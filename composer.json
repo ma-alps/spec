@@ -2,7 +2,7 @@
     "name": "ma-alps/ma-alps",
     "description": "A REST application design for MaAlps",
     "require": {
-        "koriym/app-state-diagram": "^0.7.0"
+        "koriym/app-state-diagram": "^0.7.1"
     },
     "scripts": {
         "doc": "./vendor/koriym/app-state-diagram/bin/asd docs/profile.xml"
