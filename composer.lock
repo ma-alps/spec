@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbf16f1675b3d214836940b871370149",
+    "content-hash": "72c6cc4d7f8acaa1d2433180e8e82a36",
     "packages": [
         {
             "name": "koriym/app-state-diagram",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koriym/app-state-diagram.git",
-                "reference": "9990e77735d15d8902dae68fe2f7ef0053989d67"
+                "reference": "8ea144e8bd7190fa23ab993ebe1a9d5b3cec6a2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/9990e77735d15d8902dae68fe2f7ef0053989d67",
-                "reference": "9990e77735d15d8902dae68fe2f7ef0053989d67",
+                "url": "https://api.github.com/repos/koriym/app-state-diagram/zipball/8ea144e8bd7190fa23ab993ebe1a9d5b3cec6a2b",
+                "reference": "8ea144e8bd7190fa23ab993ebe1a9d5b3cec6a2b",
                 "shasum": ""
             },
             "require": {
@@ -26,6 +26,7 @@
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
+                "koriym/data-file": "^1.0",
                 "michelf/php-markdown": "^1.9",
                 "php": "^7.3 || ^8.0",
                 "seld/jsonlint": "^1.8"
@@ -61,9 +62,56 @@
             "description": "An Application Diagram Generator",
             "support": {
                 "issues": "https://github.com/koriym/app-state-diagram/issues",
-                "source": "https://github.com/koriym/app-state-diagram/tree/0.7.0"
+                "source": "https://github.com/koriym/app-state-diagram/tree/0.7.1"
             },
-            "time": "2021-06-06T17:25:53+00:00"
+            "time": "2021-06-13T16:16:30+00:00"
+        },
+        {
+            "name": "koriym/data-file",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koriym/Koriym.DataFile.git",
+                "reference": "b6309f91c722c7e02f02eeb5db2fd5b03543e68e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koriym/Koriym.DataFile/zipball/b6309f91c722c7e02f02eeb5db2fd5b03543e68e",
+                "reference": "b6309f91c722c7e02f02eeb5db2fd5b03543e68e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Koriym\\DataFile\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Load XML file with XSD validation",
+            "support": {
+                "issues": "https://github.com/koriym/Koriym.DataFile/issues",
+                "source": "https://github.com/koriym/Koriym.DataFile/tree/1.0.0"
+            },
+            "time": "2021-06-13T03:47:24+00:00"
         },
         {
             "name": "michelf/php-markdown",

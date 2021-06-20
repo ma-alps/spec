@@ -4,12 +4,12 @@
   "type": "object",
   "examples": [
     {
-      "$ref": "./example/AlpsItemEdit.json"
+      "$ref": "example/AlpsItemEdit.json"
     }
   ],
   "properties": {
     "alpsItem": {
-      "$ref": "./AlpsItem.json"
+      "$ref": "AlpsItem.json"
     }
   },
   "required": [

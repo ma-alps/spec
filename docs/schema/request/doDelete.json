@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "doCreateStateDiagram.json",
+  "$id": "doDelete.json",
   "type": "object",
   "examples": [
-    {"$ref": "./example/doCreateStateDiagram.json"}
+    {"$ref": "example/doDelete.json"}
   ],
   "properties": {
-    "profileFile": {
+    "id": {
       "type": "string"
     }
   },
   "required": [
-    "profileFile"
+    "id"
   ]
 }

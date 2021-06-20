@@ -28,12 +28,14 @@
         <descriptor href="#goAlpsItemEdit"/>
         <descriptor href="#goAlpsItem"/>
         <descriptor href="#goIndex"/>
+        <link href="../schema/response/Profile.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="Index">
         <descriptor href="#alpsList"/>
         <descriptor href="#goProfile"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
+        <link href="../schema/response/Index.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="AlpsItem">
         <descriptor href="#id"/>
@@ -47,34 +49,42 @@
         <descriptor href="#goAlpsProfile"/>
         <descriptor href="#goAsd" />
         <descriptor href="#doDelete"/>
-    </descriptor>
-    <descriptor id="alpsList" rel="collection">
-        <descriptor href="#AlpsItem"/>
+        <link href="../schema/response/AlpsItem.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="AlpsItemEdit">
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
+        <link href="../schema/response/AlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="alpsList" rel="collection">
+        <descriptor href="#AlpsItem"/>
+        <link href="../schema/def/alpsList.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="user" def="https://schema.org/Person" title="User">
         <descriptor href="#id" />
+        <link href="../schema/def/user.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
 
     <!-- choreography -->
     <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the user's profile">
         <doc format="markdown">An optional safe idempotent action to view the user's profile resource.</doc>
         <descriptor href="#id" title="userId" />
+        <link href="../schema/request/goProfile.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="goIndex" type="safe" rt="#Index" rel="collection" title="Go to the Index">
         <doc format="markdown">A safe idempotent action to view the index.</doc>
+        <link href="../schema/request/goIndex.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="goAlpsItemEdit" type="safe" rt="#AlpsItemEdit" rel="edit-form" title="Go to the ALPS profile item edit form">
         <doc format="markdown">A safe idempotent action to view the ALPS profile item edit form.</doc>
         <descriptor id="alpsItemId" href="#id" title="alpsItemId"/>
         <descriptor id="userId" href="#id" title="userId"/>
+        <link href="../schema/request/goAlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="goAlpsItem" type="safe" rt="#AlpsItem" rel="item" title="Go to the ALPS profile">
         <doc format="markdown">A safe idempotent action to view the ALPS profile item.</doc>
         <descriptor href="#id" title="alpsItemId"/>
+        <link href="../schema/request/goAlpsItem.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="goAsd" type="safe" rt="#Asd" title="Go to the ASD">
         <doc format="markdown">A safe idempotent action to view the state diagram.</doc>
@@ -85,17 +95,21 @@
     <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit" title="Edit an existing ALPS profile item">
         <doc format="markdown">An unsafe idempotent action to edit an existing ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
+        <link href="../schema/request/doEdit.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="doCreateStateDiagram" type="idempotent" rt="#StateDiagram" title="Create a state diagram">
         <doc format="markdown">An unsafe idempotent action to create a state diagram.</doc>
         <descriptor href="#profileFile"/>
+        <link href="../schema/request/doCreateStateDiagram.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="doCreate" type="unsafe" rt="#AlpsItem" title="Create a new ALPS profile item">
         <doc format="markdown">An unsafe action to create a new ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
+        <link href="../schema/request/doCreate.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
     <descriptor id="doDelete" type="idempotent" rt="#Profile" title="Delete an existing ALPS profile item">
         <doc format="markdown">An unsafe idempotent action to delete a existing ALPS profile item.</doc>
         <descriptor href="#id" title="alpsItemId" />
+        <link href="../schema/request/doDelete.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
 </alps>
