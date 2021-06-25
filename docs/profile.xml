@@ -7,20 +7,20 @@
     <link href="https://github.com/ma-alps/spec" rel="about"/>
 
     <!-- ontology -->
-    <descriptor id="id" def="https://schema.org/identifier"/>
+    <descriptor id="id" def="https://schema.org/identifier" title="identifier"/>
     <descriptor id="repository" title="Repository URL (custom relation)"/>
     <descriptor id="mediaType" title="Media type"/>
     <descriptor id="isPublic" title="Publication flag of profile"/>
     <descriptor id="profileFile" title="Profile raw data"/>
     <descriptor id="title" title="Title of profile"/>
-    <descriptor id="StateDiagram"/>
+    <descriptor id="StateDiagram" title="A State diagram resource"/>
     <descriptor id="Asd" title="Application State Diagram"/>
     <descriptor id="AlpsProfile" title="ALPS profile"/>
     <descriptor id="profileUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD profile"/>
     <descriptor id="asdUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD"/>
 
     <!-- taxonomy -->
-    <descriptor id="Profile">
+    <descriptor id="Profile" title="The user's profile">
         <doc>ユーザーのプロフィール。AlpsList は、所有者が訪れた際には非公開のALPS profile も含まれる。</doc>
         <descriptor href="#alpsList"/>
         <descriptor href="#user"/>
@@ -30,14 +30,16 @@
         <descriptor href="#goIndex"/>
         <link href="../schema/response/Profile.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="Index">
+    <descriptor id="Index" title="Index of the MaALPS">
+        <doc format="markdown">The MaALPS service index that embedded `alpsList`.</doc>
         <descriptor href="#alpsList"/>
         <descriptor href="#goProfile"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
         <link href="../schema/response/Index.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="AlpsItem">
+    <descriptor id="AlpsItem" title="The single item of ALPS profile">
+        <doc>Represent of the single item of ALPS profile that embedded `User`.</doc>
         <descriptor href="#id"/>
         <descriptor href="#isPublic"/>
         <descriptor href="#goIndex"/>
@@ -51,12 +53,14 @@
         <descriptor href="#doDelete"/>
         <link href="../schema/response/AlpsItem.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="AlpsItemEdit">
+    <descriptor id="AlpsItemEdit" title="Edit form for ALPS profile item">
+        <doc format="markdown">Represent of a form for edit an existing ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
         <descriptor href="#doEdit"/>
         <link href="../schema/response/AlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="alpsList" rel="collection">
+    <descriptor id="alpsList" rel="collection" title="The list of ALPS profile items">
+        <doc format="markdown">Represent of the list of ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
         <link href="../schema/def/alpsList.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
