@@ -1,6 +1,6 @@
 {
-    "name": "ma-alps/ma-alps",
-    "description": "A REST application design for MaAlps",
+    "name": "ma-alps/spec",
+    "description": "A Specification of MaAlps",
     "require": {
         "koriym/app-state-diagram": "^0.8.0"
     },
