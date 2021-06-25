@@ -7,26 +7,26 @@ digraph application_state_diagram {
   ];
   node [shape = box, style = "bold,filled" fillcolor="lightgray"];
 
-    AlpsItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItem<br />(id)<br />(isPublic)<br />(title)<br />(user)<br />(mediaType)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItem.html" target="_parent"]
+    AlpsItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItem<br />(id)<br />(isPublic)<br />(title)<br />(user)<br />(asdUrl)<br />(profileUrl)<br />(mediaType)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItem.html" target="_parent"]
     AlpsItemEdit [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>AlpsItemEdit<br />(AlpsItem)<br /></td></tr></table>>,shape=box URL="docs/semantic.AlpsItemEdit.html" target="_parent"]
     Index [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>Index<br />(alpsList)<br /></td></tr></table>>,shape=box URL="docs/semantic.Index.html" target="_parent"]
     Profile [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>Profile<br />(alpsList)<br />(user)<br /></td></tr></table>>,shape=box URL="docs/semantic.Profile.html" target="_parent"]
 
-    AlpsItem -> AlpsItemEdit [label = "goAlpsItemEdit, edit-form (safe)" URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
-    AlpsItem -> AlpsProfile [label = "goAlpsProfile (safe)" URL="docs/safe.goAlpsProfile.html" target="_parent" fontsize=13];
-    AlpsItem -> Asd [label = "goAsd (safe)" URL="docs/safe.goAsd.html" target="_parent" fontsize=13];
-    AlpsItem -> Index [label = "goIndex, collection (safe)" URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
+    AlpsItem -> AlpsItemEdit [label = <goAlpsItemEdit, edit-form (safe)> URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
+    AlpsItem -> AlpsProfile [label = <goAlpsProfile (safe)> URL="docs/safe.goAlpsProfile.html" target="_parent" fontsize=13];
+    AlpsItem -> Asd [label = <goAsd (safe)> URL="docs/safe.goAsd.html" target="_parent" fontsize=13];
+    AlpsItem -> Index [label = <goIndex, collection (safe)> URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
     AlpsItem -> Profile [label=<<table  border="0"><tr><td align="left" href="docs/idempotent.doDelete.html">doDelete (idempotent)</td></tr><tr><td align="left" href="docs/safe.goProfile.html">goProfile (safe)</td></tr></table>> fontsize=13];
-    AlpsItemEdit -> AlpsItem [label = "doEdit, edit (idempotent)" URL="docs/idempotent.doEdit.html" target="_parent" fontsize=13];
-    Index -> AlpsItem [label = "goAlpsItem, item (safe)" URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
-    Index -> Profile [label = "goProfile (safe)" URL="docs/safe.goProfile.html" target="_parent" fontsize=13];
-    Index -> StateDiagram [label = "doCreateStateDiagram (idempotent)" URL="docs/idempotent.doCreateStateDiagram.html" target="_parent" fontsize=13];
+    AlpsItemEdit -> AlpsItem [label = <doEdit, edit (idempotent)> URL="docs/idempotent.doEdit.html" target="_parent" fontsize=13];
+    Index -> AlpsItem [label = <goAlpsItem, item (safe)> URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
+    Index -> Profile [label = <goProfile (safe)> URL="docs/safe.goProfile.html" target="_parent" fontsize=13];
+    Index -> StateDiagram [label = <doCreateStateDiagram (idempotent)> URL="docs/idempotent.doCreateStateDiagram.html" target="_parent" fontsize=13];
     Profile -> AlpsItem [label=<<table  border="0"><tr><td align="left" href="docs/unsafe.doCreate.html">doCreate (unsafe)</td></tr><tr><td align="left" href="docs/safe.goAlpsItem.html">goAlpsItem (safe)</td></tr></table>> fontsize=13];
-    Profile -> AlpsItemEdit [label = "goAlpsItemEdit, edit-form (safe)" URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
-    Profile -> Index [label = "goIndex, collection (safe)" URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
+    Profile -> AlpsItemEdit [label = <goAlpsItemEdit, edit-form (safe)> URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
+    Profile -> Index [label = <goIndex, collection (safe)> URL="docs/safe.goIndex.html" target="_parent" fontsize=13];
 
-    AlpsProfile [URL="docs/semantic.AlpsProfile.html" target="_parent"]
-    Asd [URL="docs/semantic.Asd.html" target="_parent"]
-    StateDiagram [URL="docs/semantic.StateDiagram.html" target="_parent"]
+    AlpsProfile [label = <AlpsProfile> URL="docs/semantic.AlpsProfile.html" target="_parent"]
+    Asd [label = <Asd> URL="docs/semantic.Asd.html" target="_parent"]
+    StateDiagram [label = <StateDiagram> URL="docs/semantic.StateDiagram.html" target="_parent"]
 
 }

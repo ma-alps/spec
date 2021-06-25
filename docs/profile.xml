@@ -45,6 +45,8 @@
         <descriptor href="#goIndex"/>
         <descriptor href="#title"/>
         <descriptor href="#user"/>
+        <descriptor href="#asdUrl"/>
+        <descriptor href="#profileUrl"/>
         <descriptor href="#goProfile"/>
         <descriptor href="#mediaType"/>
         <descriptor href="#goAlpsItemEdit"/>
