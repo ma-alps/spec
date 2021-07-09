@@ -3,9 +3,7 @@
   "$id": "AlpsItemEdit.json",
   "type": "object",
   "examples": [
-    {
-      "$ref": "example/AlpsItemEdit.json"
-    }
+    {"$ref": "example/AlpsItemEdit.json"}
   ],
   "properties": {
     "alpsItem": {
