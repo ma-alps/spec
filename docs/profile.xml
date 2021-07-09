@@ -108,7 +108,7 @@
         <descriptor href="#profileFile"/>
         <link href="../schema/request/doCreateStateDiagram.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
-    <descriptor id="doCreate" type="unsafe" rt="#AlpsItem" title="Create a new ALPS profile item">
+    <descriptor id="doCreate" type="unsafe" rt="#Profile" title="Create a new ALPS profile item">
         <doc format="markdown">An unsafe action to create a new ALPS profile item.</doc>
         <descriptor href="#AlpsItem"/>
         <link href="../schema/request/doCreate.json" rel="schema" title="JsonSchema file"/>
