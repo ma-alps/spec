@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "goIndex.json",
   "type": "object",
+  "examples": [
+    {"$ref": "example/goIndex.json"}
+  ],
   "properties": {
   }
 }
