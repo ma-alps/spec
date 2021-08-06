@@ -19,7 +19,7 @@ digraph application_state_diagram {
     AlpsItem -> Profile [label=<<table  border="0"><tr><td align="left" href="docs/idempotent.doDelete.html">doDelete (idempotent)</td></tr><tr><td align="left" href="docs/safe.goProfile.html">goProfile (safe)</td></tr></table>> fontsize=13];
     AlpsItemEdit -> AlpsItem [label = <doEdit, edit (idempotent)> URL="docs/idempotent.doEdit.html" target="_parent" fontsize=13];
     Index -> AlpsItem [label = <goAlpsItem, item (safe)> URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
-    Index -> Profile [label = <goProfile (safe)> URL="docs/safe.goProfile.html" target="_parent" fontsize=13];
+    Index -> Profile [label=<<table  border="0"><tr><td align="left" href="docs/safe.goMyProfile.html">goMyProfile (safe)</td></tr><tr><td align="left" href="docs/safe.goProfile.html">goProfile (safe)</td></tr></table>> fontsize=13];
     Index -> StateDiagram [label = <doCreateStateDiagram (idempotent)> URL="docs/idempotent.doCreateStateDiagram.html" target="_parent" fontsize=13];
     Profile -> AlpsItem [label = <goAlpsItem, item (safe)> URL="docs/safe.goAlpsItem.html" target="_parent" fontsize=13];
     Profile -> AlpsItemEdit [label = <goAlpsItemEdit, edit-form (safe)> URL="docs/safe.goAlpsItemEdit.html" target="_parent" fontsize=13];
