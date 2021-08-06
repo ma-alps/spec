@@ -34,6 +34,7 @@
         <doc format="markdown">The MaALPS service index that embedded `alpsList`.</doc>
         <descriptor href="#alpsList"/>
         <descriptor href="#goProfile"/>
+        <descriptor href="#goMyProfile"/>
         <descriptor href="#doCreateStateDiagram"/>
         <descriptor href="#goAlpsItem"/>
         <link href="../schema/response/Index.json" rel="schema" title="JsonSchema file"/>
@@ -76,6 +77,11 @@
         <doc format="markdown">An optional safe idempotent action to view the user's profile resource.</doc>
         <descriptor href="#id" title="userId" />
         <link href="../schema/request/goProfile.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="goMyProfile" type="safe" rt="#Profile" title="Go to the user's own profile">
+        <doc format="markdown">A safe idempotent action to view the user's own profile resource.</doc>
+        <descriptor href="#id" title="userId" />
+        <link href="../schema/request/goMyProfile.json" rel="schema" title="JsonSchema file" />
     </descriptor>
     <descriptor id="goIndex" type="safe" rt="#Index" rel="collection" title="Go to the Index">
         <doc format="markdown">A safe idempotent action to view the index.</doc>
