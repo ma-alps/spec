@@ -122,6 +122,7 @@
     <descriptor id="doDelete" type="idempotent" rt="#Profile" title="Delete an existing ALPS profile item">
         <doc format="markdown">An unsafe idempotent action to delete a existing ALPS profile item.</doc>
         <descriptor href="#id" title="alpsItemId" />
+        <descriptor href="#user" title="userId"/>
         <link href="../schema/request/doDelete.json" rel="schema" title="JsonSchema file"/>
     </descriptor>
 </alps>
