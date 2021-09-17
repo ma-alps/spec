@@ -8,9 +8,13 @@
   "properties": {
     "id": {
       "type": "string"
+    },
+    "userId": {
+      "$ref": "../def/user.json#/properties/id"
     }
   },
   "required": [
-    "id"
+    "id",
+    "userId"
   ]
 }
