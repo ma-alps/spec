@@ -6,42 +6,11 @@
     {"$ref": "example/AlpsItem.json"}
   ],
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "isPublic": {
-      "type": "boolean"
-    },
-    "title": {
-      "type": "string",
-      "examples": [
-        "MaAlps"
-      ]
-    },
-    "user": {
-      "$ref": "../def/user.json"
-    },
-    "mediaType": {
-      "type": "string",
-      "enum": [
-        "application/alps+json",
-        "application/alps+xml"
-      ]
-    },
-    "asdUrl": {
-      "type": "string"
-    },
-    "profileUrl": {
-      "type": "string"
+    "alpsItem": {
+      "$ref": "../def/alpsItem.json"
     }
   },
   "required": [
-    "id",
-    "isPublic",
-    "title",
-    "user",
-    "mediaType",
-    "asdUrl",
-    "profileUrl"
+    "alpsItem"
   ]
 }

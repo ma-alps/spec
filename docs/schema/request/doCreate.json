@@ -6,11 +6,35 @@
     {"$ref": "example/doCreate.json"}
   ],
   "properties": {
-    "alpsItem": {
-      "$ref": "../response/AlpsItem.json"
+    "id": {
+      "$ref": "../def/alpsItem.json#/properties/id"
+    },
+    "isPublic": {
+      "$ref": "../def/alpsItem.json#/properties/isPublic"
+    },
+    "title": {
+      "$ref": "../def/alpsItem.json#/properties/title"
+    },
+    "user": {
+      "$ref": "../def/alpsItem.json#/properties/user"
+    },
+    "mediaType": {
+      "$ref": "../def/alpsItem.json#/properties/mediaType"
+    },
+    "asdUrl": {
+      "$ref": "../def/alpsItem.json#/properties/asdUrl"
+    },
+    "profileUrl": {
+      "$ref": "../def/alpsItem.json#/properties/profileUrl"
     }
   },
   "required": [
-    "alpsItem"
+    "id",
+    "isPublic",
+    "title",
+    "user",
+    "mediaType",
+    "asdUrl",
+    "profileUrl"
   ]
 }

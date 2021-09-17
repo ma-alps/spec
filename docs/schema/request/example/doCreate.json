@@ -1,14 +1,12 @@
 {
   "$schema": "../doCreate.json",
-  "alpsItem": {
-    "id": "1",
-    "title": "The Example profile",
-    "profileUrl": "https://ma-alps.github.io/spec/profile.xml",
-    "mediaType": "application/alps+xml",
-    "asdUrl": "https://ma-alps.github.io/spec/index.html",
-    "isPublic": false,
-    "user": {
-      "id": "NaokiTsuchiya"
-    }
-  }
+  "id": "1",
+  "isPublic": false,
+  "title": "The Example profile",
+  "user": {
+    "id": "NaokiTsuchiya"
+  },
+  "mediaType": "application/alps+xml",
+  "asdUrl": "https://ma-alps.github.io/spec/index.html",
+  "profileUrl": "https://ma-alps.github.io/spec/profile.xml",
 }

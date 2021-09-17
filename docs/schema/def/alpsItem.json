@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "alpsItem.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "isPublic": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string",
+      "examples": [
+        "MaAlps"
+      ]
+    },
+    "user": {
+      "$ref": "../def/user.json"
+    },
+    "mediaType": {
+      "type": "string",
+      "enum": [
+        "application/alps+json",
+        "application/alps+xml"
+      ]
+    },
+    "asdUrl": {
+      "type": "string"
+    },
+    "profileUrl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "isPublic",
+    "title",
+    "user",
+    "mediaType",
+    "asdUrl",
+    "profileUrl"
+  ]
+}
