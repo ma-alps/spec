@@ -1,7 +1,5 @@
 {
   "$schema": "../doDelete.json",
   "id": "1",
-  "user": {
-    "id": "ShioriAriki"
-  }
+  "userId": "ShioriAriki"
 }

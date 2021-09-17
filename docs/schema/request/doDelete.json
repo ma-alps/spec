@@ -9,12 +9,12 @@
     "id": {
       "type": "string"
     },
-    "user": {
-      "$ref": "../def/user.json"
+    "userId": {
+      "$ref": "../def/user.json#/properties/id"
     }
   },
   "required": [
     "id",
-    "user"
+    "userId"
   ]
 }
