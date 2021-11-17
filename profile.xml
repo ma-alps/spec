@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alps version="1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://alps-io.github.io/schemas/alps.xsd">
+    <title>MaAlps</title>
+    <link href="https://github.com/ma-alps/spec" rel="#repository"/>
+    <link href="https://github.com/ma-alps/spec" rel="about"/>
+
+    <!-- ontology -->
+    <descriptor id="id" def="https://schema.org/identifier" title="identifier"/>
+    <descriptor id="repository" title="Repository URL (custom relation)"/>
+    <descriptor id="mediaType" title="Media type"/>
+    <descriptor id="isPublic" title="Publication flag of profile"/>
+    <descriptor id="profileFile" title="Profile raw data"/>
+    <descriptor id="title" title="Title of profile"/>
+    <descriptor id="StateDiagram" title="A State diagram resource"/>
+    <descriptor id="Asd" title="Application State Diagram"/>
+    <descriptor id="AlpsProfile" title="ALPS profile"/>
+    <descriptor id="profileUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD profile"/>
+    <descriptor id="asdUrl"  href="https://raw.githubusercontent.com/alps-io/imports/master/schema.org/types/URL.json"  title="URL of ASD"/>
+
+    <!-- taxonomy -->
+    <descriptor id="Profile" title="The user's profile">
+        <doc>ユーザーのプロフィール。AlpsList は、所有者が訪れた際には非公開のALPS profile も含まれる。</doc>
+        <descriptor href="#alpsList"/>
+        <descriptor href="#user"/>
+        <descriptor href="#doCreate"/>
+        <descriptor href="#goAlpsItemEdit"/>
+        <descriptor href="#goAlpsItem"/>
+        <descriptor href="#goIndex"/>
+        <link href="../schema/response/Profile.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="Index" title="Index of the MaALPS">
+        <doc format="markdown">The MaALPS service index that embedded `alpsList`.</doc>
+        <descriptor href="#alpsList"/>
+        <descriptor href="#goProfile"/>
+        <descriptor href="#goMyProfile"/>
+        <descriptor href="#doCreateStateDiagram"/>
+        <descriptor href="#goAlpsItem"/>
+        <link href="../schema/response/Index.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="AlpsItem" title="The single item of ALPS profile">
+        <doc>Represent of the single item of ALPS profile that embedded `User`.</doc>
+        <descriptor href="#id"/>
+        <descriptor href="#isPublic"/>
+        <descriptor href="#goIndex"/>
+        <descriptor href="#title"/>
+        <descriptor href="#user"/>
+        <descriptor href="#asdUrl"/>
+        <descriptor href="#profileUrl"/>
+        <descriptor href="#goProfile"/>
+        <descriptor href="#mediaType"/>
+        <descriptor href="#goAlpsItemEdit"/>
+        <descriptor href="#goAlpsProfile"/>
+        <descriptor href="#goAsd" />
+        <descriptor href="#doDelete"/>
+        <link href="../schema/response/AlpsItem.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="AlpsItemEdit" title="Edit form for ALPS profile item">
+        <doc format="markdown">Represent of a form for edit an existing ALPS profile item.</doc>
+        <descriptor href="#AlpsItem"/>
+        <descriptor href="#doEdit"/>
+        <link href="../schema/response/AlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="alpsList" rel="collection" title="The list of ALPS profile items">
+        <doc format="markdown">Represent of the list of ALPS profile item.</doc>
+        <descriptor href="#AlpsItem"/>
+        <link href="../schema/def/alpsList.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="user" def="https://schema.org/Person" title="User">
+        <descriptor href="#id" />
+        <link href="../schema/def/user.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+
+    <!-- choreography -->
+    <descriptor id="goProfile" type="safe" rt="#Profile" title="Go to the user's profile">
+        <doc format="markdown">An optional safe idempotent action to view the user's profile resource.</doc>
+        <descriptor href="#id" title="userId" />
+        <link href="../schema/request/goProfile.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="goMyProfile" type="safe" rt="#Profile" title="Go to the user's own profile">
+        <doc format="markdown">A safe idempotent action to view the user's own profile resource.</doc>
+        <descriptor href="#id" title="userId" />
+        <link href="../schema/request/goMyProfile.json" rel="schema" title="JsonSchema file" />
+    </descriptor>
+    <descriptor id="goIndex" type="safe" rt="#Index" rel="collection" title="Go to the Index">
+        <doc format="markdown">A safe idempotent action to view the index.</doc>
+        <link href="../schema/request/goIndex.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="goAlpsItemEdit" type="safe" rt="#AlpsItemEdit" rel="edit-form" title="Go to the ALPS profile item edit form">
+        <doc format="markdown">A safe idempotent action to view the ALPS profile item edit form.</doc>
+        <descriptor id="alpsItemId" href="#id" title="alpsItemId"/>
+        <descriptor id="userId" href="#id" title="userId"/>
+        <link href="../schema/request/goAlpsItemEdit.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="goAlpsItem" type="safe" rt="#AlpsItem" rel="item" title="Go to the ALPS profile">
+        <doc format="markdown">A safe idempotent action to view the ALPS profile item.</doc>
+        <descriptor href="#id" title="alpsItemId"/>
+        <link href="../schema/request/goAlpsItem.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="goAsd" type="safe" rt="#Asd" title="Go to the ASD">
+        <doc format="markdown">A safe idempotent action to view the state diagram.</doc>
+    </descriptor>
+    <descriptor id="goAlpsProfile" type="safe" rt="#AlpsProfile" title="Go to the ALPS profile">
+        <doc format="markdown">A safe idempotent action to view the ALPS profile.</doc>
+    </descriptor>
+    <descriptor id="doEdit" type="idempotent" rt="#AlpsItem" rel="edit" title="Edit an existing ALPS profile item">
+        <doc format="markdown">An unsafe idempotent action to edit an existing ALPS profile item.</doc>
+        <descriptor href="#AlpsItem"/>
+        <link href="../schema/request/doEdit.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="doCreateStateDiagram" type="idempotent" rt="#StateDiagram" title="Create a state diagram">
+        <doc format="markdown">An unsafe idempotent action to create a state diagram.</doc>
+        <descriptor href="#profileFile"/>
+        <link href="../schema/request/doCreateStateDiagram.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="doCreate" type="unsafe" rt="#Profile" title="Create a new ALPS profile item">
+        <doc format="markdown">An unsafe action to create a new ALPS profile item.</doc>
+        <descriptor href="#AlpsItem"/>
+        <link href="../schema/request/doCreate.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+    <descriptor id="doDelete" type="idempotent" rt="#Profile" title="Delete an existing ALPS profile item">
+        <doc format="markdown">An unsafe idempotent action to delete a existing ALPS profile item.</doc>
+        <descriptor href="#id" title="alpsItemId" />
+        <link href="../schema/request/doDelete.json" rel="schema" title="JsonSchema file"/>
+    </descriptor>
+</alps>
